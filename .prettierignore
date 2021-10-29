@@ -1,0 +1,12 @@
+*.min.js
+**/node_modules/**
+
+# cache-dirs
+**/.cache
+
+# fixtures
+**/__testfixtures__/**
+**/__tests__/fixtures/**
+
+# coverage
+coverage
