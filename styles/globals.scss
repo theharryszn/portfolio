@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f50e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.header-email-text {
+  writing-mode: vertical-rl;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text-video {
+  .name {
+    mix-blend-mode: multiply;
+    background: #000;
+  }
+}
+
+.outline-btn {
+  position: relative;
+  overflow: hidden;
+  @apply text-primary;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    color: white;
+    @apply bg-primary;
+  }
+}
+
+.animate-load {
+  transform: translateY(-100%);
+  animation: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s infinite normal none
+    running load;
+}
+
+@keyframes load {
+  100% {
+    transform: translateY(0px);
+  }
+}
