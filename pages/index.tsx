@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           </div>
         </nav>
 
-        <div className="flex flex-col space-y-4 px-10 lg:px-40 relative">
+        <div className="lg:flex flex-col space-y-4 px-10 lg:px-40 relative hidden">
           <div className="flex items-center space-x-1 font-bold uppercase tracking-wide text-sm pl-2"><span>Hi There </span><Image src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="20" height="16" alt="emoji"/>, I'm</div>
           <div className="text-5xl font-bold relative text-video">
               <video loop autoPlay muted playsInline className="absolute top-0 w-48 object-cover">
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
             <button className="px-10 uppercase tracking-wide text-sm py-3 bg-primary rounded-lg hover:bg-opacity-75 transition-all duration-300">Hire Me</button>
           </div>
         </div>
-          <div className="h-screen absolute bottom-0 right-0 z-50 px-40 py-20 transition-all duration-300 cursor-pointer flex flex-col items-center justify-end space-y-2">
+          <div className="h-screen absolute bottom-0 right-0 z-50 px-20 lg:px-40 py-20 transition-all duration-300 cursor-pointer flex flex-col items-center justify-end space-y-2">
             <div className="flex items-center space-x-4 animate-pulse justify-self-en">
               <p className="text-gray-400 font-semibold text-sm">Scroll  Down </p>
               <svg className="w-6 h-6 animate-load" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
