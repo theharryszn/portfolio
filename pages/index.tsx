@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative">
+      <div className="relative hidden lg:block">
         <div className="flex flex-col space-y-6 items-center justify-end h-screen fixed bottom-0 left-0 z-50 px-5 lg:px-10">
           <span className="hover:text-primary transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
             <svg className="feather feather-github" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -50,13 +50,13 @@ const Home: NextPage = () => {
           </div>
         </nav>
 
-        <div className="lg:flex flex-col space-y-4 px-10 lg:px-40 relative hidden">
+        <div className="flex flex-col space-y-4 px-10 lg:px-40 relative">
           <div className="flex items-center space-x-1 font-bold uppercase tracking-wide text-sm pl-2"><span>Hi There </span><Image src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="20" height="16" alt="emoji"/>, I'm</div>
           <div className="text-5xl font-bold relative text-video">
-              <video loop autoPlay muted playsInline className="absolute top-0 w-48 object-cover">
+              <video loop autoPlay muted playsInline className="absolute top-0 w-48 object-cover transform scale-y-95">
                 <source src="https://d33wubrfki0l68.cloudfront.net/ab4c4ea31f1543825102ebf15a35080cdc1397ce/b8c4f/static/images/frontpage/hero/gradient.mp4"/>
               </video>
-              <span className="absolute top-0 block name">Abidemi.</span>
+              <span className="absolute top-0 block name ">Abidemi.</span>
             </div>
           <div className="text-lg text-primary font-bold tracking-wide">Software Engineer</div>
           <div className="text-sm text-gray-400 max-w-md">
