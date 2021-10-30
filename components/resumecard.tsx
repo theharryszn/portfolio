@@ -26,12 +26,12 @@ const experiences : Experience[] = [
 
 const Resumecard = () => {
     return (
-        <div className="p-12 grid grid-cols-12 resume-card w-full my-6 gap-x-4">
+        <div className="p-6 lg:p-12 grid grid-cols-12 resume-card w-full my-6 gap-x-4">
             <div className="col-span-4 flex flex-col space-y-4">
                 <div className="text-sm text-primary font-semibold">
                     <p>abidemi-harry.netlify.app</p>
                     <p>Ogun State, Nigeria</p>
-                    <p>opeabidemi@gmail.com</p>
+                    <a href="mailto:opeabidemi@gmail.com">opeabidemi@gmail.com</a>
                 </div>
                 <div>
                     <p className="font-semibold text-lg">Technologies</p>
@@ -65,7 +65,7 @@ const Resumecard = () => {
                 </div>
             </div>
             <div className="col-span-8">
-                <p className="text-5xl font-bold">Abidemi</p>
+                <p className="text-3xl lg:text-5xl font-bold">Abidemi</p>
                 <p className="text-xl font-semibold text-primary">Software Engineer</p>
                 <p className="py-6">
                     Hi, I'm Abidemi
