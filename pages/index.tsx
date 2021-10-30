@@ -1,16 +1,16 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from "next/image"
-import { useState } from 'react'
 import AboutMe from '../components/aboutme'
+import Artdirection from '../components/artdirection'
+import Contact from '../components/contact'
 import FeaturedProjects from '../components/featuredProjects'
+import Footer from '../components/footer'
+import Header from '../components/header'
 
 const Home: NextPage = () => {
 
-  const age = useState(new Date().getFullYear() - 2003)[0]
-
   return (
-    <div className="w-screen h-screen relative">
+    <div className="relative">
       <Head>
         <title>Abidemi - Software Engineer</title>
         <meta name="description" content="Portfolio Website For Abidemi Harry" />
@@ -37,49 +37,16 @@ const Home: NextPage = () => {
           <span className="font-semibold tracking-wide text-sm hover:text-primary header-email-text transform transition-all duration-300 hover:-translate-y-2">opeabidemi@gmail.com</span>
           <span className="border-l w-1 h-36 border-white"></span>
         </div>
-        <div className="h-screen fixed bottom-0 right-0 z-50 px-40 py-20 transition-all duration-300 cursor-pointer flex flex-col items-center justify-end space-y-2">
-         
-        </div>
       </div>
-
-      <header className="w-screen h-4/5 lg:h-screen flex justify-start items-center relative">
-        <nav className="absolute top-0 w-screen px-5 lg:px-20 py-10 flex items-center justify-between">
-          <div className="hover:text-primary transition-all duration-300 font-bold cursor-pointer">{"<AbidemiHarry/>"}</div>
-          <div>
-            <span className="cursor-pointer border-primary border px-3 py-2 rounded-lg outline-btn">Resume</span>
-          </div>
-        </nav>
-
-        <div className="flex flex-col space-y-4 px-10 lg:px-40 relative">
-          <div className="flex items-center space-x-1 font-bold uppercase tracking-wide text-sm pl-2"><span>Hi There </span><Image src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="20" height="16" alt="emoji"/>, I'm</div>
-          <div className="text-5xl font-bold relative text-video">
-              <video loop autoPlay muted playsInline className="absolute top-0 w-48 object-cover transform scale-y-95">
-                <source src="https://d33wubrfki0l68.cloudfront.net/ab4c4ea31f1543825102ebf15a35080cdc1397ce/b8c4f/static/images/frontpage/hero/gradient.mp4"/>
-              </video>
-              <span className="absolute top-0 block name ">Abidemi.</span>
-            </div>
-          <div className="text-lg text-primary font-bold tracking-wide">Software Engineer</div>
-          <div className="text-sm text-gray-400 max-w-md">
-            {age} y/o Nigerian Developer <br/>
-            JavaScript and Typescript Enthusiasts <br/>
-            Really love building high-quality apps and websites
-          </div>
-          <p className="font-semibold text-gray-400">Mobile Developer - Fullstack Developer</p>
-          <div>
-            <button className="px-10 uppercase tracking-wide text-sm py-3 bg-primary rounded-lg hover:bg-opacity-75 transition-all duration-300">Hire Me</button>
-          </div>
-        </div>
-          <div className="h-screen absolute bottom-0 right-0 z-50 px-20 lg:px-40 py-20 transition-all duration-300 cursor-pointer flex flex-col items-center justify-end space-y-2">
-            <div className="flex items-center space-x-4 animate-pulse justify-self-en">
-              <p className="text-gray-400 font-semibold text-sm">Scroll  Down </p>
-              <svg className="w-6 h-6 animate-load" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-            </div>
-          </div>
-      </header>
       
-      <main className="px-10 lg:px-40">
+      <Header/>
+
+      <main className="px-2 lg:px-40">
           <AboutMe/>
+          <Artdirection/>
           <FeaturedProjects/>
+          <Contact/>
+          <Footer/>
       </main>
     </div>
   )

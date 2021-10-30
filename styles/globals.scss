@@ -14,6 +14,7 @@ body {
     system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   @apply bg-secondary;
+  cursor: url("/assets/images/cursor.png"), default;
 }
 
 ::-webkit-scrollbar-track {
@@ -71,4 +72,24 @@ a {
   100% {
     transform: translateY(0px);
   }
+}
+
+.h-80p {
+  height: 80vh;
+}
+
+.ml-art1 {
+  margin-left: 70vw;
+}
+
+.ml-art2 {
+  margin-left: -100vw;
+}
+
+.resume-card {
+  background: rgba(255, 255, 255, 0.021);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.055);
 }
