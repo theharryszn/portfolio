@@ -1,8 +1,8 @@
 import React from 'react'
 
-const technologies = ["JavaScript","TypeScript","Java","TailwindCSS","Kotlin","GraphQL","React","Next.JS","React Native", "SCSS", "Spring Boot","Android","NodeJS", "Electron", "TypeGraphQL", "ExpressJS", "Python"]
-const languages = ["English", "Yoruba"];
-const tools = ["Git","GitHub","Gitpod","Node", "Expo", "TypeORM"]
+export const technologies = ["JavaScript","TypeScript","Java","TailwindCSS","Kotlin","GraphQL","React","Next.JS","React Native", "SCSS", "Spring Boot","Android","NodeJS", "Electron", "TypeGraphQL", "ExpressJS", "Python"]
+export const languages = ["English", "Yoruba"];
+export const tools = ["Git","GitHub","Gitpod","Node", "Expo", "TypeORM"]
 
 type Experience = {
     startDate : string,
@@ -10,16 +10,14 @@ type Experience = {
     position : string,
     company : string,
     description : string,
-    location : string
 }
 
-const experiences : Experience[] = [
+export const experiences : Experience[] = [
     {
-        startDate : "03/2021",
-        endDate : "09/2021",
+        startDate : "March",
+        endDate : "August 2021",
         position : "Web Development Tutor",
         company : "Capriquota Technologies",
-        location: "Abeokuta, Nigeria",
         description : "Tutoring Computer Science SIWES students the basics of web development and preparing for the tech community."
     }
 ]
@@ -38,7 +36,7 @@ const Resumecard = () => {
                     <div className="ml-6">
                         <ul className="list-disc py-2">
                             {
-                                technologies.map(tech => <li>{tech}</li>)
+                                technologies.map((tech, i) => <li key={i}>{tech}</li>)
                             }
                         </ul>
                     </div>
@@ -48,7 +46,7 @@ const Resumecard = () => {
                     <div className="ml-6">
                         <ul className="list-disc py-2">
                             {
-                                tools.map(tool => <li>{tool}</li>)
+                                tools.map((tool,i) => <li key={i}>{tool}</li>)
                             }
                         </ul>
                     </div>
@@ -58,7 +56,7 @@ const Resumecard = () => {
                     <div className="ml-6">
                         <ul className="list-disc py-2">
                             {
-                                languages.map(lang => <li>{lang}</li>)
+                                languages.map((lang,i) => <li key={i}>{lang}</li>)
                             }
                         </ul>
                     </div>
@@ -79,12 +77,12 @@ const Resumecard = () => {
                     <p className="text-primary font-bold text-xl">Experience</p>
                     <div>
                         {
-                            experiences.map(exp => {
+                            experiences.map((exp,i) => {
                                 return (
-                                    <div className="py-4 px-3">
-                                        <p className="text-primary font-semibold text-sm uppercase">{exp.startDate}-{exp.endDate} {exp.location}</p>
+                                    <div className="py-4 px-3" key={i}>
+                                        <p className="text-primary font-semibold text-sm uppercase">{exp.startDate} - {exp.endDate}</p>
                                         <p className="capitalize text-xl text-gray-200 font-bold">{exp.position}</p>
-                                        <p className="text-primary font-semibold text-sm">{exp.company}</p>
+                                        <p className="text-primary font-semibold text-sm">@ {exp.company}</p>
                                         <p className="py-2">{exp.description}</p>
                                     </div>
                                 )

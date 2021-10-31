@@ -1,14 +1,32 @@
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import { motion, useMotionValue, useViewportScroll } from 'framer-motion'
 import { scrollToView } from "../utils/scroll"
 import Navbar from "./navbar"
 
 const Header = () => {
     const age = useState(new Date().getFullYear() - 2003)[0]
-
+    const { scrollYProgress } = useViewportScroll();
+    const pathLength = useMotionValue(0);
     return (
         <header className="w-screen h-80p lg:h-screen flex justify-start items-center relative">
+        <svg className="absolute top-o right-0 lg:mr-48 transform -translate-y-20" width="472" height="619" viewBox="0 0 472 619" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <motion.path
+            animate={{ pathLength: 10 }}
+            style={{ pathLength }}
+            transition={{ duration : 10 }}
+            d="M5 0V369C5 406.003 34.9969 436 72 436V436C109.003 436 139 406.003 139 369V0" stroke="#FF2121" stroke-width="10"/>
+        <motion.path
+            animate={{ pathLength: 10 }}
+            style={{ pathLength }}
+            transition={{ duration : 10 }}
+            d="M169 0V547C169 584.003 198.997 614 236 614V614C273.003 614 303 584.003 303 547V0" stroke="#FF2121" stroke-width="10"/>
+        <motion.path
+            animate={{ pathLength: 2 }}
+            style={{ pathLength }}
+            transition={{ duration : 2 }}
+            d="M333 0V421C333 458.003 362.997 488 400 488V488C437.003 488 467 458.003 467 421V0" stroke="#FF2121" stroke-width="10"/>
+        </svg>
         <Navbar/>
         <div className="flex flex-col space-y-4 px-10 lg:px-40 relative">
           <div className="flex items-center space-x-1 font-bold uppercase tracking-wide text-sm pl-2"><span>Hi There </span><Image src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="20" height="16" alt="emoji"/>, I'm</div>
