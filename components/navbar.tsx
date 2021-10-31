@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Navbar = () => {
     return (
-        <nav className="absolute top-0 w-screen px-10 lg:px-20 py-10 flex items-center justify-between text-sm">
+        <nav className="fixed top-0 w-screen px-10 lg:px-20 py-10 flex items-center justify-between text-sm">
         <div className="hover:text-primary transition-all duration-300 font-bold cursor-pointer">
             <Link href="/">
                 <svg width="100" height="24" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">

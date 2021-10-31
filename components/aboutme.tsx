@@ -1,3 +1,5 @@
+import { technologies, tools } from "./resumecard";
+
 const AboutMe = () => {
     return (
         <div className="py-10" id="about">
@@ -11,8 +13,22 @@ const AboutMe = () => {
               Hello! My name is Abidemi and I love building high-quality apps and websites.
             </p>
             <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad et quis accusantium quae iusto obcaecati fuga est dolores culpa vero rerum mollitia fugiat nisi facilis perspiciatis saepe qui quos aliquid consequatur reiciendis recusandae quasi, impedit eius! Earum, esse consequatur, animi veritatis, exercitationem dicta sit voluptas veniam unde cumque aspernatur eum eveniet consectetur maxime fugit corrupti culpa placeat neque! Omnis porro eius veritatis molestiae delectus nemo illum deleniti accusantium aliquid. Maxime ea nulla provident tenetur dolorem totam, blanditiis delectus temporibus a assumenda molestiae libero? Impedit tempore et, quisquam harum dolorem natus nulla praesentium rem magni placeat voluptatem consequatur, eos accusantium sed.
+              I'm a Software Engineer from Nigeria, I love building scalable solutions and applications that help people live better.
             </p>
+            <div>
+              <p className="mt-2 font-bold">
+                Some tools I have been working with recently:
+              </p>
+              <div>
+                <ul className="grid grid-cols-2 py-3 list-inside tools-list">
+                  {
+                    technologies.slice(0,4).concat(...tools.slice(0,4)).map((tool,i) => {
+                      return <li key={i}>{tool}</li>
+                    })
+                  }
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
     )

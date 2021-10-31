@@ -50,6 +50,20 @@ a {
   }
 }
 
+.tools-list {
+  li {
+    position: relative;
+    padding-left: 16px;
+
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: 0px;
+      color: rgb(255, 33, 33);
+    }
+  }
+}
+
 .outline-btn {
   position: relative;
   overflow: hidden;
