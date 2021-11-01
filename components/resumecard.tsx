@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const technologies = ["JavaScript","TypeScript","Java","TailwindCSS","Kotlin","GraphQL","React","Next.JS","React Native", "SCSS", "Spring Boot","Android","NodeJS", "Electron", "TypeGraphQL", "ExpressJS", "Python"]
+export const technologies = ["JavaScript","TypeScript","Java","C#","TailwindCSS","Kotlin","GraphQL","React","Next.JS","React Native", "SCSS", "Spring Boot","Android","NodeJS", "Electron", "TypeGraphQL", "ExpressJS", "Python"]
 export const languages = ["English", "Yoruba"];
 export const tools = ["Git","GitHub","Gitpod","Node", "Expo", "TypeORM"]
 
@@ -19,14 +19,28 @@ export const experiences : Experience[] = [
         position : "Web Development Tutor",
         company : "Capriquota Technologies",
         description : "Tutoring Computer Science SIWES students the basics of web development and preparing for the tech community."
-    }
+    },
+    {
+        startDate : "August",
+        endDate : "September 2021",
+        position : "C# and Java Faculty - Intern",
+        company : "Aptech Computer Education",
+        description : "Teaching advanced C# and Java"
+    },
+    {
+        startDate : "October",
+        endDate : "Present",
+        position : "Android Faculty",
+        company : "Aptech Computer Education",
+        description : "Teaching from basics to advanced Android App Development with Kotlin"
+    },
 ]
 
 const Resumecard = () => {
     return (
-        <div className="p-6 lg:p-12 grid grid-cols-12 resume-card w-full my-6 gap-x-4">
-            <div className="col-span-4 flex flex-col space-y-4">
-                <div className="text-sm text-primary font-semibold">
+        <div className="p-6 lg:p-12 grid grid-cols-12 resume-card w-full my-6 gap-x-4 text-sm">
+            <div className="hidden col-span-4 lg:flex flex-col space-y-4">
+                <div className="text-primary font-semibold">
                     <p>abidemi-harry.netlify.app</p>
                     <p>Ogun State, Nigeria</p>
                     <a href="mailto:opeabidemi@gmail.com">opeabidemi@gmail.com</a>
@@ -62,7 +76,7 @@ const Resumecard = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-span-8">
+            <div className="col-span-full lg:col-span-8">
                 <p className="text-3xl lg:text-5xl font-bold">Abidemi</p>
                 <p className="text-xl font-semibold text-primary">Software Engineer</p>
                 <p className="py-6">
@@ -73,11 +87,11 @@ const Resumecard = () => {
                     <p>I build user-friendly websites and cross-platform mobile-applications</p>
                 </p>
                 <span className="border-b w-full h-1 border-gray-400"></span>
-                <div className="py-4">
+                <div className="py-2">
                     <p className="text-primary font-bold text-xl">Experience</p>
                     <div>
                         {
-                            experiences.map((exp,i) => {
+                            experiences.reverse().map((exp,i) => {
                                 return (
                                     <div className="py-4 px-3" key={i}>
                                         <p className="text-primary font-semibold text-sm uppercase">{exp.startDate} - {exp.endDate}</p>
@@ -90,7 +104,7 @@ const Resumecard = () => {
                         }
                     </div>
                 </div>
-                <div className="py-4">
+                <div className="py-2">
                     <p className="text-primary font-bold text-xl">Projects</p>
                 </div>
             </div>
