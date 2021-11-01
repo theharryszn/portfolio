@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Navbar = () => {
     return (
-        <nav className="fixed top-0 w-screen px-10 lg:px-20 py-10 flex items-center justify-between text-sm">
+        <nav className="fixed z-50 top-0 w-screen px-10 lg:px-20 py-10 flex items-center justify-between text-sm">
         <div className="hover:text-primary transition-all duration-300 font-bold cursor-pointer">
             <Link href="/">
                 <svg width="100" height="24" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ const Navbar = () => {
             </Link>
         </div>
         <div>
-          <Link href="resume"><span className="cursor-pointer border-primary border px-3 py-2 rounded-lg outline-btn">Resume</span></Link>
+          <Link href="resume"><span className="cursor-pointer border-primary border-2 font-bold px-3 py-2 rounded-lg outline-btn">Resume</span></Link>
         </div>
       </nav>
     )
