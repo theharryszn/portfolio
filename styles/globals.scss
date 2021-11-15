@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-white: #ffffff;
+  --color-gray: #c4c4c4;
+  --color-black: #000000;
+  --color-purple: #8000ff;
+  --color-light-purple: rgb(223, 0, 0);
+  --color-light-blue: #6bc5f8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -43,11 +52,56 @@ a {
   box-sizing: border-box;
 }
 
-.text-video {
-  .name {
-    mix-blend-mode: multiply;
-    background: #000;
+nav {
+  background: rgba(255, 255, 255, 0.021);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.hero-text {
+  background: linear-gradient(
+    -45deg,
+    var(--color-light-blue),
+    var(--color-light-purple),
+    var(--color-white),
+    var(--color-white)
+  );
+  width: max-content;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  line-height: 105%;
+  animation: gradient 3s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.heading-text {
+  background: linear-gradient(
+    -45deg,
+    var(--color-light-blue),
+    var(--color-light-purple),
+    var(--color-white),
+    var(--color-white)
+  );
+  width: max-content;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  background-position: 100% 50%;
 }
 
 .tools-list {

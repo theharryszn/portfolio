@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     
   }, { passive: false })
 
-  return <div ref={ref} className="bg-secondary text-white overflow-x-hidden">
-    <div className="hidden lg:block rounded-full w-5 h-5 border-2 border-primary fixed" style={{
+  return <div ref={ref} className="text-white overflow-x-hidden">
+    <div className="hidden lg:block rounded-full w-5 h-5 border-2 border-primary fixed " style={{
       top: position.y - 10,
       left: position.x - 10
     }}></div>
