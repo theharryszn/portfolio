@@ -2,13 +2,13 @@ import { technologies, tools } from "./resumecard";
 
 const AboutMe = () => {
     return (
-        <div className="py-10" id="about">
+        <div className="py-10 lg:py-32" id="about">
           <p className="flex items-center space-x-4 px-6 font-bold tracking-wide text-gray-600">
             <span className="text-xs">About Me </span>
             <span className="border-b w-36 h-1 border-gray-600"></span>
           </p>
           <div className="px-6 font-semibold text-gray-400 py-3">
-            <h3 className="text-4xl font-bold mb-10"><span className="text-primary text-opacity-70">{">_"}</span> whoami 😁</h3>
+            <h3 className="text-5xl font-bold mb-20"><span className="text-primary text-opacity-70">{">_"}</span> <span className="heading-text">whoami</span> 😁</h3>
             <p>
               Hello! My name is Abidemi and I love building high-quality apps and websites.
             </p>

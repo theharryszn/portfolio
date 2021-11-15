@@ -14,7 +14,7 @@ const Artdirection = () => {
         
     }, [ scrollYProgress ])
     return (
-        <div className="py-4 text-6xl lg:text-8xl uppercase text-gray-600 font-bold flex flex-col space-y-4 lg:space-y-6">
+        <div className="py-10 lg:py-32 text-6xl lg:text-8xl uppercase text-gray-600 font-bold flex flex-col space-y-4 lg:space-y-6">
             <span className="border-b w-full h-1 border-gray-600"></span>
             <span className="text-xs text-primary">{">_"} Web Developer</span>
             <motion.span

@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <header className="w-screen h-80p lg:h-screen flex justify-start items-center relative">
-        <svg className="absolute top-o right-0 lg:mr-48 transform translate-x-96 lg:-translate-y-20 lg:translate-x-0" width="472" height="619" viewBox="0 0 472 619" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg className="absolute top-o right-0 lg:mr-48 transform translate-x-96 lg:-translate-y-20 lg:translate-x-0" width="472" height="619" viewBox="0 0 472 619" fill="none" xmlns="http://www.w3.org/2000/svg">
         <motion.path
             animate={{ pathLength: 10 }}
             style={{ pathLength, strokeWidth : 4 }}
@@ -29,18 +29,15 @@ const Header = () => {
             style={{ pathLength, strokeWidth : 4 }}
             transition={{ duration : 2 }}
             d="M333 0V421C333 458.003 362.997 488 400 488V488C437.003 488 467 458.003 467 421V0" stroke="#FF2121"/>
-        </svg>
+        </motion.svg>
         <Navbar/>
         <div className="flex flex-col space-y-4 px-10 lg:px-40 relative">
           <div className="flex items-center space-x-1 font-bold uppercase tracking-wide text-sm pl-2"><span>Hi There </span><Image src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="20" height="16" alt="emoji"/>, I'm</div>
-          <div className="text-5xl font-bold relative text-video h-12">
-              <video loop autoPlay muted playsInline className="absolute h-full top-0 object-cover transform scale-y-95" style={{ width : ref.current?.style.width}}>
-                <source src="https://d33wubrfki0l68.cloudfront.net/ab4c4ea31f1543825102ebf15a35080cdc1397ce/b8c4f/static/images/frontpage/hero/gradient.mp4"/>
-              </video>
-              <span className="absolute top-0 name h-full w-max flex items-center justify-start text-white" ref={ref}>Abidemi.</span>
+          <div className="text-5xl font-bold relative hero-text h-12">
+              Abidemi.
           </div>
           <div className="text-lg text-primary font-bold tracking-wide">Software Engineer</div>
-          <div className="text-sm text-gray-400 max-w-md">
+          <div className="text-sm text-gray-400 max-w-md font-medium">
             {age} y/o Nigerian Developer <br/>
             JavaScript and Typescript Enthusiasts <br/>
             Really love building high-quality apps and websites
