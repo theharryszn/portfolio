@@ -104,9 +104,9 @@ const Resumecard = () => {
                         }
                     </div>
                 </div>
-                <div className="py-2">
+                {/* <div className="py-2">
                     <p className="text-primary font-bold text-xl">Projects</p>
-                </div>
+                </div> */}
             </div>
         </div>
     )

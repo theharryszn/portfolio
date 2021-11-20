@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <header className="w-screen h-80p lg:h-screen flex justify-start items-center relative">
-        <motion.svg className="absolute top-o right-0 lg:mr-48 transform translate-x-96 lg:-translate-y-20 lg:translate-x-0" width="472" height="619" viewBox="0 0 472 619" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg className="absolute top-0 right-0 lg:mr-48 transform translate-x-96 lg:translate-x-0" width="472" height="619" viewBox="0 0 472 619" fill="none" xmlns="http://www.w3.org/2000/svg">
         <motion.path
             animate={{ pathLength: 10 }}
             style={{ pathLength, strokeWidth : 4 }}
@@ -37,19 +37,19 @@ const Header = () => {
               Abidemi.
           </div>
           <div className="text-lg text-primary font-bold tracking-wide">Software Engineer</div>
-          <div className="text-sm text-gray-400 max-w-md font-medium">
+          <div className="text-sm text-gray-300 max-w-md font-medium">
             {age} y/o Nigerian Developer <br/>
             JavaScript and Typescript Enthusiasts <br/>
             Really love building high-quality apps and websites
           </div>
-          <p className="font-semibold text-gray-400">Mobile Developer - Fullstack Developer</p>
+          <p className="font-semibold text-gray-300">Mobile Developer - Fullstack Developer</p>
           <div>
             <button className="px-10 uppercase tracking-wide text-sm py-3 bg-primary rounded-lg hover:bg-opacity-75 transition-all duration-300" onClick={() : void => scrollToView("contact")}>Hire Me</button>
           </div>
         </div>
           <div className="hidden absolute bottom-0 right-0 z-40 mx-20 lg:mx-40 my-16 w-64 transition-all duration-300 cursor-pointer lg:flex flex-col items-center justify-end space-y-2">
             <div className="flex items-center space-x-4 justify-between w-full animate-pulse "  onClick={() : void => scrollToView("about")}>
-              <span className="text-gray-400 font-semibold text-sm">Scroll  Down </span>
+              <span className="text-gray-300 font-semibold text-sm">Scroll  Down </span>
               <svg className="w-6 h-6 animate-load" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
             </div>
           </div>
