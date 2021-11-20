@@ -1,22 +1,65 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
 import AboutMe from '../components/aboutme'
 import Artdirection from '../components/artdirection'
 import Contact from '../components/contact'
 import FeaturedProjects from '../components/featuredProjects'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import { motion } from 'framer-motion'
 
 const Home: NextPage = () => {
+
+  const transition: { duration: number; ease: number[] } = {
+    duration: 1.4,
+    ease: [0.6, 0.01, -0.05, 0.9],
+  };
+
+  const age = useState(new Date().getFullYear() - 2003)[0]
 
   return (
     <div className="relative">
       <Head>
         <title>Abidemi - Software Engineer</title>
         <meta name="description" content="Portfolio Website For Abidemi Harry" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" href="svg/favicon.svg" />
+        <link href="https://abidemi-harry.netlify.app/" rel="canonical" />
+        <meta name="theme-color" content="#10101A" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="#FF2121"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Abidemi Harry 🚀 &mdash; Software Engineer"
+        />
+        <meta
+            name="twitter:title"
+            content="Abidemi Harry 🚀 &mdash; Software Engineer"
+        />
+        <meta
+          name="twitter:description"
+          content={`${age} y/o Nigerian Developer <br/>
+          JavaScript and Typescript Enthusiasts <br/>
+          Really love building high-quality apps and websites`}
+        />
+        <meta name="twitter:image" content="assets/images/me.png" />
+        <meta name="twitter:url" content="https://abidemi-harry.netlify.app/" />
       </Head>
+
+      {/* PRELOADER */}
+      {/* <div className="h-screen w-screen fixed top-0 z-50 flex items-center justify-center bg-secondary">
+      <motion.div
+        initial={{ x: -10, opacity: 0 }}
+        animate={{ x: 0, opacity: 1, transition: { ...transition } }}
+        className="preloader__left"
+      >
+        <span>Hello World</span>
+      </motion.div>
+      </div> */}
 
       <div className="relative hidden lg:block">
         <div className="flex flex-col space-y-6 items-center justify-end h-screen fixed bottom-0 left-0 z-40 px-5 lg:px-10">

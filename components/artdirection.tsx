@@ -22,14 +22,14 @@ const Artdirection = () => {
                     width : "100%",
                     translateX : art1
                 }}
-            className="w-screen whitespace-nowrap art text-gray-600 hover:text-gray-400 transition-all duration-300">
+            className="w-screen whitespace-nowrap art text-gray-600 hover:text-gray-300 transition-all duration-300">
                 <motion.span className="ml-art1">I build quality, user-friendly websites</motion.span></motion.span>
             <motion.span  
                 style={{
                     width : "100%",
                     translateX : art2
                 }}
-                className="w-screen whitespace-nowrap art text-gray-600 hover:text-gray-400 transition-all duration-300 ml-art2">I build cross-platform, scalable mobile apps.</motion.span>
+                className="w-screen whitespace-nowrap art text-gray-600 hover:text-gray-300 transition-all duration-300 ml-art2">I build cross-platform, scalable mobile apps.</motion.span>
             <span className="text-xs self-end text-primary">{">_"} Mobile App Developer</span>
             <span className="border-b w-full h-1 border-gray-600 "></span>
         </div>
