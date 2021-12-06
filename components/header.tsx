@@ -44,11 +44,11 @@ const Header = () => {
           </div>
           <p className="font-semibold text-gray-300">Mobile Developer - Fullstack Developer</p>
           <div>
-            <button className="px-10 uppercase tracking-wide text-sm py-3 bg-primary rounded-lg hover:bg-opacity-75 transition-all duration-300" onClick={() : void => scrollToView("contact")}>Hire Me</button>
+            <button className="px-10 uppercase cursor-scale-down tracking-wide text-sm py-3 bg-primary rounded-lg hover:bg-opacity-75 transition-all duration-300" onClick={() : void => scrollToView("contact")}>Hire Me</button>
           </div>
         </div>
           <div className="hidden absolute bottom-0 right-0 z-40 mx-20 lg:mx-40 my-16 w-64 transition-all duration-300 cursor-pointer lg:flex flex-col items-center justify-end space-y-2">
-            <div className="flex items-center space-x-4 justify-between w-full animate-pulse "  onClick={() : void => scrollToView("about")}>
+            <div className="flex items-center space-x-4 justify-between w-full animate-pulse cursor-scale-down"  onClick={() : void => scrollToView("about")}>
               <span className="text-gray-300 font-semibold text-sm">Scroll  Down </span>
               <svg className="w-6 h-6 animate-load" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
             </div>

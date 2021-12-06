@@ -12,31 +12,32 @@ type Experience = {
     description : string,
 }
 
-export const experiences : Experience[] = [
-    {
-        startDate : "March",
-        endDate : "August 2021",
-        position : "Web Development Tutor",
-        company : "Capriquota Technologies",
-        description : "Tutoring Computer Science SIWES students the basics of web development and preparing for the tech community."
-    },
-    {
-        startDate : "August",
-        endDate : "September 2021",
-        position : "C# and Java Faculty - Intern",
-        company : "Aptech Computer Education",
-        description : "Teaching advanced C# and Java"
-    },
-    {
-        startDate : "October",
-        endDate : "Present",
-        position : "Android Faculty",
-        company : "Aptech Computer Education",
-        description : "Teaching from basics to advanced Android App Development with Kotlin"
-    },
-]
-
 const Resumecard = () => {
+
+    const  experiences = React.useState<Array<Experience>>([
+        {
+            startDate : "March",
+            endDate : "August 2021",
+            position : "Web Development Tutor",
+            company : "Capriquota Technologies",
+            description : "Tutoring Computer Science SIWES students the basics of web development and preparing for the tech community."
+        },
+        {
+            startDate : "August",
+            endDate : "September 2021",
+            position : "C# and Java Faculty - Intern",
+            company : "Aptech Computer Education",
+            description : "Teaching advanced C# and Java"
+        },
+        {
+            startDate : "October",
+            endDate : "Present",
+            position : "Android Faculty",
+            company : "Aptech Computer Education",
+            description : "Teaching from basics to advanced Android App Development with Kotlin"
+        },
+    ])[0];
+
     return (
         <div className="p-6 lg:p-12 grid grid-cols-12 resume-card w-full my-6 gap-x-4 text-sm">
             <div className="hidden col-span-4 lg:flex flex-col space-y-4">
