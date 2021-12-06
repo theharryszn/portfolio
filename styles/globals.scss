@@ -6,8 +6,8 @@
   --color-white: #ffffff;
   --color-gray: #c4c4c4;
   --color-black: #000000;
-  --color-purple: #8000ff;
-  --color-light-purple: rgb(223, 0, 0);
+  --color-purple: hsl(270, 100%, 50%);
+  --color-primary: rgb(223, 0, 0);
   --color-light-blue: #6bc5f8;
 }
 
@@ -23,7 +23,6 @@ body {
     system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   @apply bg-secondary;
-  cursor: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -62,10 +61,8 @@ nav {
 .hero-text {
   background: linear-gradient(
     -45deg,
-    var(--color-light-blue),
-    var(--color-light-purple),
-    var(--color-white),
-    var(--color-white)
+    var(--color-primary),
+    var(--color-light-blue)
   );
   width: max-content;
   background-clip: text;
