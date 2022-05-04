@@ -7,6 +7,8 @@ import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
   const age = useState(new Date().getFullYear() - 2003)[0];
+  // console.log(window.location.origin);
+
   return (
     <main>
       <Head>
@@ -27,7 +29,7 @@ const Home: NextPage = () => {
         />
         <meta
           property='og:image'
-          content='/assets/images/abidemi-harry-og.png'
+          content={`https://abidemiharry.vercel.app/assets/images/abidemi-harry-og.png`}
         />
         <meta property='og:url' content='https://abidemiharry.vercel.app/' />
         <meta
@@ -42,7 +44,7 @@ const Home: NextPage = () => {
         />
         <meta
           name='twitter:image'
-          content='/assets/images/abidemi-harry-og.png'
+          content={`https://abidemiharry.vercel.app/assets/images/abidemi-harry-og.png`}
         />
         <meta name='twitter:url' content='https://abidemiharry.vercel.app/' />
       </Head>
