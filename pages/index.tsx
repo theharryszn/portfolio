@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <link rel='shortcut icon' href='/favicon.ico' />
         <link rel='icon' href='/favicon.ico' />
         <link href='https://abidemiharry.vercel.app/' rel='canonical' />
-        <meta name='theme-color' content='#ef4444' />
+        <meta name='theme-color' content='0d0d0d' />
         <meta name='apple-mobile-web-app-status-bar-style' content='#ef4444' />
         <meta property='og:type' content='website' />
         <meta
