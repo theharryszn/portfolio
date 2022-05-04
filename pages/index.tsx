@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         />
         <meta
           property='og:image'
-          content='/assests/images/abidemi-harry-og.png'
+          content='/assets/images/abidemi-harry-og.png'
         />
         <meta property='og:url' content='https://abidemiharry.vercel.app/' />
         <meta
@@ -40,7 +40,10 @@ const Home: NextPage = () => {
           JavaScript and Typescript Enthusiasts <br/>
           Really love building high-quality apps and websites`}
         />
-        <meta name='twitter:image' content='/assets/images/me.png' />
+        <meta
+          name='twitter:image'
+          content='/assets/images/abidemi-harry-og.png'
+        />
         <meta name='twitter:url' content='https://abidemiharry.vercel.app/' />
       </Head>
       <Header />
