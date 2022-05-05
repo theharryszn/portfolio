@@ -5,7 +5,7 @@ import { socials } from "./Header";
 const Footer = () => {
   return (
     <footer className='footer'>
-      <svg
+      {/* <svg
         xmlns='http://www.w3.org/2000/svg'
         className='absolute bottom-full w-screen'
         viewBox='0 0 1440 320'
@@ -15,7 +15,7 @@ const Footer = () => {
           fillOpacity='1'
           d='M0,224L0,288L720,288L720,256L1440,256L1440,320L720,320L720,320L0,320L0,320Z'
         ></path>
-      </svg>
+      </svg> */}
       <div>
         <div className='footer-title'>Interested to work with me?</div>
         <div className='footer-body'>
@@ -48,7 +48,10 @@ const Footer = () => {
         </div>
       </div>
       <div className='copyright'>
-        &copy; {new Date().getFullYear()} Abidemi Ope. All Rights Reserved.
+        <span>
+          &copy; {new Date().getFullYear()} Abidemi Ope. All Rights Reserved.
+        </span>
+        <span>Built with NextJS and TailwindCSS.</span>
       </div>
     </footer>
   );

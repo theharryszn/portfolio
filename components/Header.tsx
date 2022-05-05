@@ -73,7 +73,12 @@ const Header = () => {
           })}
         </div>
       </div>
-      <div className='scroll-btn'>
+      <div
+        className='scroll-btn'
+        onClick={() =>
+          window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+        }
+      >
         <span>Scroll down</span>
         <CaretDown size={16} />
       </div>
