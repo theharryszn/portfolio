@@ -34,7 +34,7 @@ const Skills = () => {
     <section className='section '>
       <div className='section-title'>Skills</div>
       <div className='section-body'>
-        <div className='grid grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
           {skills.map((skill, index) => {
             return (
               <div key={index} className='card'>

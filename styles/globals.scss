@@ -130,7 +130,7 @@ a {
 }
 
 .card {
-  @apply w-full px-8 py-12 lg:py-12 lg:px-10 text-base flex flex-col space-y-2 lg:text-xl font-bold bg-opacity-30 rounded-md border border-red-500/20 hover:border-red-500/70 cursor-pointer transition;
+  @apply w-full px-8 py-12 lg:py-12 lg:px-10 text-base flex flex-col space-y-2 lg:text-xl font-bold rounded-md border border-red-500/20 hover:border-red-500/70 cursor-pointer transition;
   background: #3f09090b;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -140,6 +140,6 @@ a {
   @apply lg:hidden fixed top-0 left-0 w-screen flex flex-col items-center justify-center h-screen z-50;
   background: #0d0d0df7;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
