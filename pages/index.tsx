@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
-// import FeaturedProjects from '../components/FeaturedProjects'
+import FeaturedProjects from "../components/FeaturedProjects";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
+import Spotify from "../components/Spotify";
 
 const Home: NextPage = () => {
   const age = useState(new Date().getFullYear() - 2003)[0];
@@ -49,8 +50,9 @@ const Home: NextPage = () => {
         <meta name='twitter:url' content='https://abidemiharry.vercel.app/' />
       </Head>
       <Header />
-      {/* <FeaturedProjects/> */}
       <Skills />
+      <FeaturedProjects />
+      <Spotify />
     </main>
   );
 };
