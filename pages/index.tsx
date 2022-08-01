@@ -4,7 +4,7 @@ import { useState } from "react";
 import FeaturedProjects from "../components/FeaturedProjects";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
-import Spotify from "../components/Spotify";
+// import Spotify from "../components/Spotify";
 
 const Home: NextPage = () => {
   const age = useState(new Date().getFullYear() - 2003)[0];
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
       <Header />
       <Skills />
       <FeaturedProjects />
-      <Spotify />
+      {/* <Spotify /> */}
     </main>
   );
 };
