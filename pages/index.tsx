@@ -4,11 +4,10 @@ import { useState } from "react";
 import FeaturedProjects from "../components/FeaturedProjects";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
-// import Spotify from "../components/Spotify";
+import Spotify from "../components/Spotify";
 
 const Home: NextPage = () => {
   const age = useState(new Date().getFullYear() - 2003)[0];
-  // console.log(window.location.origin);
 
   return (
     <main>
@@ -39,8 +38,8 @@ const Home: NextPage = () => {
         />
         <meta
           name='twitter:description'
-          content={`${age} y/o Nigerian Developer <br/>
-          JavaScript and Typescript Enthusiasts <br/>
+          content={`${age} y/o Nigerian Developer ·
+          JavaScript and Typescript Enthusiasts ·
           Really love building high-quality apps and websites`}
         />
         <meta
@@ -52,7 +51,7 @@ const Home: NextPage = () => {
       <Header />
       <Skills />
       <FeaturedProjects />
-      {/* <Spotify /> */}
+      <Spotify />
     </main>
   );
 };
