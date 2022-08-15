@@ -30,14 +30,14 @@ const Spotify = () => {
         </div>
       </div>
       <div className='section-body'>
-        <div className='grid grid-cols-2 gap-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
           {playlists.map((playlist, index) => (
             <div key={index}>
               <iframe
                 style={{
                   borderRadius: "12px",
                 }}
-                src={playlist.embedUrl + "&theme=0"}
+                src={playlist.embedUrl + "&theme=1"}
                 width='100%'
                 height='380'
                 frameBorder='0'

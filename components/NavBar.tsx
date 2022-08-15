@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import { Equals, X } from "phosphor-react";
+import { Equals, Moon, Sun, X } from "phosphor-react";
 import React from "react";
 import { motion } from "framer-motion";
 import { socials } from "./Header";
@@ -33,6 +33,18 @@ const NavBar: NextPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const { pathname } = useRouter();
 
+  // const [theme, setTheme] = useState("dark");
+
+  const changeTheme = React.useCallback(() => {
+    if (localStorage.theme === "dark") {
+      localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+    } else {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
   React.useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
@@ -47,6 +59,13 @@ const NavBar: NextPage = () => {
             <span className='link'>{link.name}</span>
           </Link>
         ))}
+        <span
+          onClick={changeTheme}
+          className='p-2 hover:bg-red-500/20 rounded-full cursor-pointer'
+        >
+          <Sun size={18} className='hidden dark:block' />
+          <Moon size={18} className='block dark:hidden' />
+        </span>
       </div>
       <div className='menu' onClick={() => setIsMobileMenuOpen(true)}>
         <Equals size={20} />
@@ -87,7 +106,7 @@ const NavBar: NextPage = () => {
                 target='_blank'
                 title={handle.name}
                 key={index}
-                className='p-2 hover:bg-red-900/20 rounded-full'
+                className='p-2 hover:bg-red-500/20 rounded-full'
                 rel='noreferrer'
               >
                 {handle.icon && <handle.icon size={24} />}

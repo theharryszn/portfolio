@@ -40,10 +40,10 @@ const Resume: NextPage = () => {
           <span className='ui-code-snippet'>{"<p>"}</span>
           <span className='mb-4 block font-bold'>PROFFESIONAL SUMMARY</span>
           <span>
-            I&apos;m a Software Engineer from Nigeria, I love building scalable
-            solutions and applications that help people live better. I have
-            advanced experience in tools like JavaScript, TypeScript ,Java, C#,
-            Git, GitHub, Gitpod, Node and React Native. I&apos;m a
+            I&apos;m a Software Engineer from Nigeria 🇳🇬, I love building
+            scalable solutions and applications that help people live better. I
+            have advanced experience in tools like JavaScript, TypeScript ,Java,
+            C#, Git, GitHub, Gitpod, Node and React Native. I&apos;m a
             Student-centered educator with solid background in post-secondary
             environments. Teaching students in Software Engineering from basic
             undergraduate to advanced courses. Well-versed in course planning,

@@ -5,6 +5,7 @@ import FeaturedProjects from "../components/FeaturedProjects";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
 import Spotify from "../components/Spotify";
+import Technologies from "../components/Technologies";
 
 const Home: NextPage = () => {
   const age = useState(new Date().getFullYear() - 2003)[0];
@@ -50,6 +51,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <Skills />
+      <Technologies />
       <FeaturedProjects />
       <Spotify />
     </main>

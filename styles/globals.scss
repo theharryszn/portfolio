@@ -17,7 +17,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  @apply text-gray-100 bg-[#0D0D0D] text-sm selection:bg-red-500/20;
+  @apply dark:text-gray-100 dark:bg-[#0D0D0D] bg-gray-50 text-sm selection:bg-red-500/20;
   font-family: 'MonaLisa', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -29,11 +29,11 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .navbar {
-  @apply flex flex-row justify-between items-center py-4 px-10 border-b border-b-white/5 fixed z-50 w-screen top-0 border-t border-t-red-500;
-  background: #0D0D0D68;
+  @apply flex flex-row justify-between dark:bg-[#0D0D0D68] items-center py-4 px-10 border-b border-b-white/5 fixed z-50 w-screen top-0 border-t border-t-red-500;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 
@@ -43,10 +43,10 @@ a {
   }
 
   .navbar-links {
-    @apply hidden lg:flex flex-row space-x-7;
+    @apply hidden lg:flex flex-row space-x-7 items-center;
   
     .link {
-      @apply text-gray-100/50 hover:text-gray-100 cursor-pointer p-2 rounded-lg transition;
+      @apply dark:text-gray-100 opacity-80 dark:hover:opacity-100 cursor-pointer p-2 rounded-lg transition;
     }
   }
   
@@ -65,11 +65,11 @@ a {
   }
   
   .header-body {
-    @apply text-gray-200 text-lg w-full max-w-5xl lg:w-[64rem] py-20 leading-loose;
+    @apply dark:text-gray-200 text-lg w-full max-w-5xl lg:w-[64rem] py-20 leading-loose;
   }
   
   .scroll-btn {
-    @apply hidden lg:flex flex-row space-x-2 items-center text-xs absolute bottom-28 right-28 py-2 px-3 hover:bg-red-900/20 cursor-pointer rounded-full transition;
+    @apply hidden lg:flex flex-row space-x-2 items-center text-xs absolute bottom-28 right-28 py-2 px-3 hover:bg-red-500/20 cursor-pointer rounded-full transition;
   }
 
   .header-socials {
@@ -77,21 +77,21 @@ a {
   }
 
   .header-socials-item {
-    @apply text-gray-200 p-2 rounded-full hover:bg-red-500/20 cursor-pointer transition;
+    @apply dark:text-gray-200 p-2 rounded-full hover:bg-red-500/20 cursor-pointer transition;
   }
   
 }
 
 .footer {
-  @apply relative w-full max-w-5xl lg:w-[64rem] text-white mx-auto py-2 px-10 mt-20 pt-32 flex flex-col items-center justify-center space-y-24;
+  @apply relative w-full max-w-5xl lg:w-[64rem] dark:text-gray-100 mx-auto py-2 mt-20 pt-32 px-10 flex flex-col items-center justify-center space-y-24;
 
   .footer-title {
     font-family: 'MonaLisa-Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    @apply text-2xl lg:text-5xl font-extrabold max-w-5xl w-full lg:w-[64rem] pb-2 leading-[2.8rem] lg:leading-[5.202rem] tracking-normal selection:bg-red-500/20;
+    @apply text-2xl lg:text-5xl font-extrabold max-w-5xl w-full pb-2 leading-[2.8rem] lg:leading-[5.202rem] tracking-normal selection:bg-red-500/20;
   }
   
   .footer-body {
-    @apply text-gray-200 text-lg max-w-5xl lg:w-[64rem] leading-loose;
+    @apply dark:text-gray-200 text-lg max-w-5xl leading-loose;
   }
 
   .footer-socials {
@@ -99,7 +99,7 @@ a {
   }
 
   .footer-socials-item {
-    @apply text-gray-200 p-2 rounded-full hover:bg-red-500/20 cursor-pointer transition;
+    @apply dark:text-gray-200 p-2 rounded-full hover:bg-red-500/20 cursor-pointer transition;
   }
 }
 
@@ -120,26 +120,35 @@ a {
   @apply w-screen flex flex-col items-center px-10 py-10;
 
   .section-title {
-    @apply text-lg font-extrabold max-w-5xl w-full lg:w-[64rem] pb-10 leading-[2.8rem] lg:leading-[5.202rem] tracking-normal selection:bg-red-500/20;
+    @apply text-2xl font-extrabold max-w-5xl w-full lg:w-[64rem] pb-10 leading-[2.8rem] lg:leading-[5.202rem] tracking-normal selection:bg-red-500/20;
   }
 
   .section-body {
-    @apply text-gray-200 text-lg w-full max-w-5xl lg:w-[64rem] leading-loose;
+    @apply dark:text-gray-200 text-lg w-full max-w-5xl lg:w-[64rem] leading-loose;
   }
 }
 
 .card {
-  @apply w-full px-8 py-12 bg-[#0D0D0D]  lg:py-12 lg:px-10 text-base flex flex-col space-y-2 lg:text-xl font-bold rounded-md border border-red-500/20 hover:border-red-500/70 cursor-pointer transition;
+  @apply w-full px-8 py-12 lg:py-12 lg:px-10 text-base flex flex-col space-y-2 lg:text-xl font-bold rounded-md border border-red-500/20 hover:border-red-500/70 cursor-pointer transition;
+  // background: #3f09090b;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.technology {
+  @apply w-full px-8 py-12 lg:py-8 lg:px-10 text-base flex flex-col space-y-2 lg:text-xl font-bold rounded-md border border-red-500/20 hover:border-red-500/70 cursor-pointer transition;
   // background: #3f09090b;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
 .mobile-menu {
-  @apply lg:hidden fixed top-0 left-0 w-screen flex flex-col items-center justify-center h-screen z-50;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  @apply lg:hidden fixed top-0 left-0 w-screen flex dark:bg-[#0D0D0D] bg-gray-100 flex-col items-center justify-center h-screen;
+  // background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 
 // Projects
 
@@ -147,14 +156,14 @@ a {
   @apply w-full grid grid-cols-1 lg:grid-cols-2 gap-10 py-10;
 
   .project-card {
-    @apply p-4 bg-[#0D0D0D] h-full text-base flex flex-col space-y-2 lg:text-xl font-bold rounded-md border border-red-500/20 hover:border-red-500/70 cursor-pointer transition;
+    @apply p-4 h-full text-base flex flex-col space-y-2 lg:text-xl font-bold rounded-md border border-red-500/20 hover:border-red-500/70 cursor-pointer transition;
 
     .project-card-image {
         @apply w-full rounded-md h-full transform hover:scale-[1.02] transition-all duration-500 object-cover object-center;
     }
 
     .project-card-body {
-      @apply text-gray-200 text-lg leading-loose flex flex-col h-full;
+      @apply dark:text-gray-200 text-lg leading-loose flex flex-col h-full;
 
       .project-card-title {
         @apply text-xl font-extrabold leading-[2.8rem] lg:leading-[5.202rem] tracking-normal selection:bg-red-500/20;
@@ -163,17 +172,17 @@ a {
           @apply flex items-center space-x-2 text-red-500;
 
           span {
-            @apply text-gray-200;
+            @apply dark:text-gray-200;
           }
         }
       }
 
       .project-card-description {
-        @apply text-gray-200 my-2 text-base leading-loose justify-self-end;
+        @apply dark:text-gray-200 my-2 text-base leading-loose justify-self-end;
       }
 
       .project-card-team {
-        @apply text-gray-200 text-sm my-2 leading-loose justify-self-end;
+        @apply dark:text-gray-200 text-sm my-2 leading-loose justify-self-end;
 
         a .team {
           @apply hover:opacity-100 opacity-95 py-1 border-b border-b-red-500 cursor-pointer transition;
@@ -181,7 +190,7 @@ a {
       }
 
       .project-card-repository a {
-        @apply text-gray-200 text-sm flex space-x-2 items-center my-2 leading-loose justify-self-end;
+        @apply dark:text-gray-200 text-sm flex space-x-2 items-center my-2 leading-loose justify-self-end;
       }
     }
   }
