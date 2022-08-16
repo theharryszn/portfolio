@@ -4,6 +4,7 @@ import React from "react";
 import Educations from "../components/Educations";
 import Experiences from "../components/Experiences";
 import Skills from "../components/Skills";
+import Technologies from "../components/Technologies";
 
 export const languages = [
   {
@@ -62,6 +63,7 @@ const Resume: NextPage = () => {
         </div>
       </header>
       <Skills />
+      <Technologies />
       <Experiences />
       <Educations />
       <section className='section'>
