@@ -14,6 +14,12 @@ export const playlists = [
     embedUrl:
       "https://open.spotify.com/embed/playlist/4XBb6KAyxSpP4UWbvdTsEb?utm_source=generator",
   },
+  {
+    title: "waGwan",
+    description: "Beyond It All",
+    embedUrl:
+      "https://open.spotify.com/embed/playlist/4rL6gJxYkZiNayJa9CqZbt?utm_source=generator",
+  },
 ];
 
 const Spotify = () => {
@@ -30,7 +36,7 @@ const Spotify = () => {
         </div>
       </div>
       <div className='section-body'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           {playlists.map((playlist, index) => (
             <div key={index}>
               <iframe
