@@ -4,6 +4,18 @@ import React from "react";
 
 export const featured_projects = [
   {
+    title: "Stickies",
+    description:
+      "Stickies is a simple note-taking web-app built with Vue and TailwindCSS. It allows you to pin sticky notes at random on a board. It harness the browsers Local Storage for storing notes.",
+    url: "https://stickies-app.vercel.app",
+    image: "/assets/images/screenshots/stickies.png",
+    repository: "https://github.com/OpeAbidemi/stickies",
+    team: {
+      name: "Abidemi Ope",
+      url: "https://github.com/OpeAbidemi",
+    },
+  },
+  {
     title: "Beatfro",
     description: "A music streaming app",
     url: "http://beatfrowaitlist.netlify.app/",
