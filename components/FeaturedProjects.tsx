@@ -114,11 +114,11 @@ const FeaturedProjects = () => {
                 <p className='text-xs text-gray-400 mb-2'>Description:</p>
                 {project.description}
               </div>
-              <div className='project-card-team'>
+              {/* <div className='project-card-team'>
                 <a target='_blank' href={project.team.url} rel='noreferrer'>
                   Developed as <span className='team'>{project.team.name}</span>
                 </a>
-              </div>
+              </div> */}
               {project.repository && (
                 <div className='project-card-repository'>
                   <a target='_blank' href={project.repository} rel='noreferrer'>
